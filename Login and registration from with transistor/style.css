@@ -1,0 +1,309 @@
+*,*::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-linear-gradient(left, #a6e6d7, #d9ebff);
+}
+
+input, button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.container {
+    overflow: hidden;
+    position: relative;
+    width: 990px;
+    height: 550px;
+    background: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.sub-cont {
+    overflow: hidden;
+    position: absolute;
+    left: 730px;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    padding-left: 260px;
+    background: #fff;
+    transition: transform 1.2s ease-in-out;
+}
+
+.container.s-signup .sub-cont {
+    -webkit-transform: translate3d(-730px, 0, 0);
+    transform: translate3d(-730px, 0, 0);
+}
+
+.img {
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    padding-top: 360px;
+}
+
+.img::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 900px;
+    height: 100%;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    transition: transform 1.2s ease-in-out;
+
+}
+
+.img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.container.s-signup .img::before {
+    transform: translate3d(640px, 0, 0);
+}
+
+.img-btn {
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    width: 100px;
+    height: 36px;
+    margin: 0 auto;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 1.2s ease-in-out;
+}
+
+.img-btn::after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+
+.img-btn span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.2s;
+
+}
+
+.container.s-signup .sign-in {
+    transform: translate3d(900px, 0, 0);
+    transition-timing-function: ease-in-out;
+    transition-duration: 1.2s;
+}
+
+.img-btn span.m-in {
+    transform: translateY(-72px);
+}
+
+.container.s-signup .img-btn span.m-in {
+    transform: translateY(0);
+}
+
+.container.s-signup .img-btn span.m-up {
+    transform: translateY(72px);
+}
+
+.sign-up {
+    transform: translate3d(-900px, 0, 0);
+}
+
+.container.container.s-signup .sign-up {
+    transform: translate3d(0, 0, 0);
+}
+
+
+.img-text {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    transition: transform 1.2s ease-in-out;
+}
+
+.img-text h2 {
+    margin-bottom: 10px;
+}
+
+.img-text p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.container.s-signup .img-text.m-up {
+    transform: translateX(520px);
+}
+
+.img-text.m-in {
+    transform: translateX(-520px);
+}
+
+.container.s-signup .img-text.m-in {
+    transform: translateX(0);
+}
+
+
+button {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    height: 36px;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.submit {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: -webkit-linear-gradient(left, #a5c0df, #8cd4c4);
+}
+
+.submit:hover {
+    background: -webkit-linear-gradient(left, #8cd4c4, #a5c0df);
+}
+
+.form {
+    position: relative;
+    width: 730px;
+    height: 100%;
+    padding: 50px 30px;
+    transition: transform 1.2s ease-in-out;
+}
+
+.container-login {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.wrap-login {
+    width: 390px;
+    background: #fff;
+    overflow: hidden;
+    padding: 15px 55px 20px 55px;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.wrap-input {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+}
+
+.input {
+    color: #555;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    padding: 0 5px;
+}
+
+.focus-input {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.focus-input::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+}
+
+.focus-input::after {
+    color: #999;
+    line-height: 1.2;
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    padding-left: 5px;
+    transition: all 0.4s;
+}
+
+.input:focus + .focus-input::after {
+    top: -15px;
+}
+
+.input:focus + .focus-input::before {
+    width: 100%;
+}
+
+.has-val.input + .focus-input::after {
+    top: -15px;
+}
+
+.has-val.input + .focus-input::before {
+    width: 100%;
+}
